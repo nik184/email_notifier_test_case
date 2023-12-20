@@ -29,7 +29,7 @@ function selectEmails(SQLite3 $db): SQLite3Result
             OR
             (
                 expiresAt > strftime('%s', DATE('NOW', '+3 days'))
-                AND expiresAt < strftime('%s', DATE('NOW', '+40 days'))
+                AND expiresAt < strftime('%s', DATE('NOW', '+4 days'))
                 AND notifiedAt < strftime('%s', DATE('NOW'))
             )
         )
